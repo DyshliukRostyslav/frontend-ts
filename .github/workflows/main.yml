@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v2
+        with:
+          repository: DyshliukRostyslav/frontend-ts
+          token: ${{ secrets.Rostyslav }}
+          ref: dev
       - uses: action/setup-node@v1
         with:
           node-version: 12

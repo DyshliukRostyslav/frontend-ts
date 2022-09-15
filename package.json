@@ -3,17 +3,5 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "publishConfig": {
-    "@DyshliukRostyslav:registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DyshliukRostyslav/frontend-ts.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": "git://github.com/DyshliukRostyslav/frontend-ts.git"
 }

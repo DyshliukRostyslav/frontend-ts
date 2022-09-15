@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 12
           registy-url: https://npm.pkg.github.com/
-          scope: 'RostyslavDyshliuk'
+          scope: 'DyshliukRostyslav'
       - run: npm install
       - run: npm publish
         env:

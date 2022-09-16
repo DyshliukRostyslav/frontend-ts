@@ -21,8 +21,8 @@ jobs:
       - run: npm ci
       - run: npm run
       - run: |
-          echo @dyshliukrostyslav:https://npm.pkg.github.com/ > build/.npmrc
-          echo '//npm.pkg.github.com/:_authToken=${NPM_AUTH_TOKEN}' >> build/.npmrc
+          echo @dyshliukrostyslav:https://npm.pkg.github.com/ > ./.npmrc
+          echo '//npm.pkg.github.com/:_authToken=${NPM_AUTH_TOKEN}' >> ./.npmrc
       - run: npm publish
         working-directory: ./build
         env:

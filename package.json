@@ -3,5 +3,8 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "repository": "git://github.com/DyshliukRostyslav/frontend-ts.git"
+  "repository": "git://github.com/DyshliukRostyslav/frontend-ts.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }

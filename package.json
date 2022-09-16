@@ -1,9 +1,9 @@
 {
-  "name": "@DyshliukRostyslav/frontend-ts",
+  "name": "@dyshliukrostyslav/frontend-ts",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "repository": "git://github.com/DyshliukRostyslav/frontend-ts.git",
+  "repository": "https://github.com/DyshliukRostyslav/frontend-ts.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }

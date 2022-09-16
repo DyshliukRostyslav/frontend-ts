@@ -5,24 +5,21 @@ on:
     branches: [ dev ]
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest 
+    permissions: 
+      contents: read
+      packages: write 
     steps:
       - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@DyshliukRostyslav/frontend-ts'
+          # Defaults to the user or organization that owns the workflow file
+          scope: '@DyshliukRostyslav'
       - run: npm ci
-      - run: npm run
-      - run: |
-          git config user.name DyshliukRostyslav
-          git config user.email slash.php@gmail.com
-          npm version patch
-          git push
-          git push --tags
-      - run: npm publish --access restricted
+      - run: npm publish
         env:
-          # NOTE: using the built-in GITHUB token here because we're publishing to THIS repository's packages.
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

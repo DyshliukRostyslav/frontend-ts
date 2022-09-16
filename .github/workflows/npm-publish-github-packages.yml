@@ -24,6 +24,5 @@ jobs:
           echo @dyshliukrostyslav:https://npm.pkg.github.com/ > ./.npmrc
           echo '//npm.pkg.github.com/:_authToken=${NPM_AUTH_TOKEN}' >> ./.npmrc
       - run: npm publish
-        working-directory: ./build
         env:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

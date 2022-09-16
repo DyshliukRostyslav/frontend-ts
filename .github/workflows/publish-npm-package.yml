@@ -28,5 +28,5 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - uses: JS-DevTools/npm-publish@v1
-          with:
-            NPM_GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+        with:
+          NPM_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

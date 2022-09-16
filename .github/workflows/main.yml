@@ -17,12 +17,12 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name DyshliukRostyslav
+          git config user.email slash.php@gmail.com
           npm version patch
           git push
           git push --tags
       - run: npm publish --access restricted
         env:
           # NOTE: using the built-in GITHUB token here because we're publishing to THIS repository's packages.
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

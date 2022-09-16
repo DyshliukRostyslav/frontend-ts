@@ -17,19 +17,22 @@ jobs:
           node-version: 16
       - run: npm ci
 
-  publish-gpr:
-    needs: build
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+      - run: npm install
+      - run: npm run build
+      - run: |
+          echo @dyshliukrostyslav:https://npm.pkg.github.com/ > build/.npmrc
+          echo '//npm.pkg.github.com/:_authToken=${NPM_AUTH_TOKEN}' >> build/.npmrc
       - run: npm publish
+        working-directory: ./build
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

@@ -19,7 +19,10 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@DyshliukRostyslav'
       - run: npm ci
-      - run: npm version patch
+      - run: git config --global user.name 'Edenlab Tech'
+      - run: git config --global user.email 'tech@edenlab.com.ua'
+      - run: npm version patch -m "[RELEASE] %s"
+      - run: git push
       - run: npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

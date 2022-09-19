@@ -19,6 +19,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@DyshliukRostyslav'
       - run: npm ci
+      - run: npm version patch
       - run: npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

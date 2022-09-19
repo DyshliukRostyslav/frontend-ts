@@ -24,7 +24,7 @@ jobs:
       - run: git config --global user.name 'Edenlab Tech'
       - run: git config --global user.email 'tech@edenlab.com.ua'
       - run: npm version patch -m "[RELEASE] %s"
-      - run: git push "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "${{ github.head_ref }}"
+      - run: git push "https://${{ secrets.NPM_AUTH_TOKEN }}@github.com/${{ github.repository }}"
       - run: npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

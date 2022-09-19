@@ -1,0 +1,56 @@
+/* SELECT */
+
+/// Simple column select
+let contacts = await this.dbClient.contacts.find({
+  select: {
+    Id: true,
+    INN: true
+  }
+});
+
+/// Selecting column with custom name
+let contacts = await this.dbClient.contacts.find({
+  select: {
+    Id: true,
+    INN: {
+      alias: "CustomINN"
+    }
+  }
+});
+
+/// Selecting columns from linked entities
+let contacts = await this.dbClient.contacts.find({
+  select: {
+    Id: true,
+    CreatedBy: {
+      Age: true,
+      Id: true
+    }
+  }
+});
+
+/* ORDERING */
+
+/// Example of simple ordering
+let contacts = await this.dbClient.contacts.find({
+  select: {
+    Id: true
+  },
+  orderBy: {
+    Age: 'desc'
+  }
+});
+
+/// Example or ordering with linked entities
+let contacts = await this.dbClient.contacts.find({
+  select: {
+    Id: true
+  },
+  orderBy: {
+    CreatedBy: {
+      INN: 'asc',
+      Age: 'desc'
+    },
+    Age: 'desc'
+  }
+});

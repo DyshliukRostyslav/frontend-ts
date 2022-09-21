@@ -84,6 +84,7 @@ export default class HttpClient {
   }
 
   private static getPath(resource: string): string {
+    //@ts-ignore
     return `${window.Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl()}/api/${resource}`;
   }
 }

@@ -5,6 +5,7 @@ export class SysSettingsService {
   private sysSettings: any;
 
   public constructor() {
+    //@ts-ignore
     this.sysSettings = window.Terrasoft.SysSettings;
   }
 

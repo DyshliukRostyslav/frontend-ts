@@ -12,6 +12,7 @@ export class MaskHelper {
       return;
     }
     this._uniqueMaskId = config?.uniqueMaskId;
+    //@ts-ignore
     const maskId = window.Terrasoft.Mask.show(config);
     this._bodyMaskId = maskId || this._bodyMaskId;
   }
@@ -24,18 +25,22 @@ export class MaskHelper {
     let maskSelector = this._defaultMaskCssSelector;
     if (config) {
       if (config.maskId) {
+        //@ts-ignore
         window.Terrasoft.Mask.hide(config.maskId);
       }
       maskSelector = config?.selector;
     } else if (!this._bodyMaskId) {
+      //@ts-ignore
       window.Terrasoft.Mask.hide(this._bodyMaskId);
     }
+    //@ts-ignore
     window.Terrasoft.Mask.clearMasks(maskSelector);
   }
 
   public updateBodyMaskCaption(
     maskId: string, caption: string
   ): void {
+    //@ts-ignore
     window.Terrasoft.Mask.updateCaption(
       maskId,
       caption

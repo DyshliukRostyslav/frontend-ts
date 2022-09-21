@@ -1,4 +1,4 @@
-import { DialogButtons } from "types/dialog";
+import { DialogButtons } from "../types/dialog";
 
 export const showModalBox = (message: string, handler?: () => void) => {
   window.Terrasoft.showInformation(message, handler, this);

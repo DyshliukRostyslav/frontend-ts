@@ -1,4 +1,4 @@
-import { Mask } from "structures/mask";
+import { Mask } from "../structures/mask";
 import { Service } from "typedi";
 
 @Service()

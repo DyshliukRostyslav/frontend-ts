@@ -4,7 +4,7 @@ import { UnknownObject } from "../types/unknown-object";
 import { MaskHelper } from "../view-interactors/mask-helper";
 import { Service } from "typedi";
 import { RequestOptions } from "./models/request-options";
-import { showModalBox } from "ui/modal-box";
+import { showModalBox } from "../ui/modal-box";
 
 @Service()
 export default class HttpClient {

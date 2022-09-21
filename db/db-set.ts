@@ -1,4 +1,4 @@
-import { requireAsync } from "require";
+import { requireAsync } from "../require";
 import EntityMapperService from "services/entity-mapper-service";
 import { QueryHelper } from "./query-helper";
 

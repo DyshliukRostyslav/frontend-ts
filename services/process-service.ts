@@ -1,7 +1,7 @@
-import { Resources } from "interfaces/resources";
-import { requireAsync } from "require";
-import { Guid } from "structures/guid";
-import { ProcessRequest, ProcessResponse } from "types/process";
+import { Resources } from "../interfaces/resources";
+import { requireAsync } from "../require";
+import { Guid } from "../structures/guid";
+import { ProcessRequest, ProcessResponse } from "../types/process";
 import { Service } from "typedi";
 import { formatString } from 'typescript-string-operations';
 import { FeaturesService } from "./features-service";

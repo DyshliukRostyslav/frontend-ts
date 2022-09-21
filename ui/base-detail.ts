@@ -1,4 +1,4 @@
-import { Sandbox } from "interfaces/sandbox";
+import { Sandbox } from "../interfaces/sandbox";
 import { SetOptions } from "./models/ui";
 import { methods } from "./class-utils";
 import * as events from "events";

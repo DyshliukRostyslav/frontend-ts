@@ -53,7 +53,7 @@ export default class ProcessService {
   }
 
   private async getProcessById(sysProcessId?: Guid | string): Promise<any> {
-    const esq = window.Ext.create("Terrasoft.EntitySchemaQuery", {
+    const esq = Ext.create("Terrasoft.EntitySchemaQuery", {
       rootSchemaName: "VwSysProcess",
       rowCount: 1
     });

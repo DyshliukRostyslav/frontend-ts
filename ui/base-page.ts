@@ -4,6 +4,7 @@ import { methods } from "./class-utils";
 import { Guid } from "../structures/guid";
 
 export abstract class BasePage {
+  //@ts-ignore
   protected Ext: any = window.Ext;
   protected sandbox: Sandbox
 

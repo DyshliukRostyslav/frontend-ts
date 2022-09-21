@@ -5,6 +5,7 @@ import * as events from "events";
 
 
 export abstract class BaseDetail {
+  //@ts-ignore
   protected Ext: any = window.Ext;
   protected sandbox: Sandbox
 

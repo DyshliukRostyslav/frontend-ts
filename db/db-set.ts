@@ -11,6 +11,7 @@ export class DbSet<
   private schema: any;
 
   constructor(private schemaName: string) {
+    //@ts-ignore
     this.schema = window.Terrasoft[this.schemaName];
   }
 

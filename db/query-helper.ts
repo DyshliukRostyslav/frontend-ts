@@ -17,6 +17,7 @@ import {
 
 export class QueryHelper {
   public static buildInsert(schema: any, query: any) {
+    //@ts-ignore
     const insertQuery = window.Ext.create("Terrasoft.InsertQuery", {
       rootSchema: schema
     });
@@ -30,6 +31,7 @@ export class QueryHelper {
   }
 
   public static buildUpdate(schema: any, query: any) {
+    //@ts-ignore
     const updateQuery = window.Ext.create("Terrasoft.UpdateQuery", {
       rootSchema: schema
     });
@@ -44,6 +46,7 @@ export class QueryHelper {
   }
 
   public static buildDelete(schema: any, query: any) {
+    //@ts-ignore
     const deleteQuery = window.Ext.create("Terrasoft.DeleteQuery", {
       rootSchema: schema
     });
@@ -53,6 +56,7 @@ export class QueryHelper {
   }
 
   public static buildSelect(schemaName: string, query: any, options: any) {
+    //@ts-ignore
     const esq = window.Ext.create(
       "Terrasoft.EntitySchemaQuery",
       Object.assign({
@@ -202,18 +206,25 @@ export class QueryHelper {
   private static mapOrder(order: string, column: any) {
     switch (order) {
       case "asc":
+        //@ts-ignore
         return column.orderDirection = window.Terrasoft.OrderDirection.ASC;
       case "desc":
+        //@ts-ignore
         return column.orderDirection = window.Terrasoft.OrderDirection.DESC;
     }
   }
 
   private static mapAggregate(aggregate: string) {
     switch (aggregate) {
+      //@ts-ignore
       case "count": return window.Terrasoft.AggregationType.COUNT;
+      //@ts-ignore
       case "sum": return window.Terrasoft.AggregationType.SUM;
+      //@ts-ignore
       case "avg": return window.Terrasoft.AggregationType.AVG;
+      //@ts-ignore
       case "min": return window.Terrasoft.AggregationType.MIN;
+      //@ts-ignore
       case "max": return window.Terrasoft.AggregationType.MAX;
     }
   }

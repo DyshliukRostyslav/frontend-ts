@@ -33,9 +33,11 @@ export default class ProcessService {
   private runProcess(config: ProcessRequest): Promise<ProcessResponse> {
     if (this.canGetNextProcessStepsViaResponse()) {
       const options = this.getRunProcessOptions(config);
+      //@ts-ignore
       return new Promise(resolve => window.Terrasoft.ProcessEngineUtilities.runProcess(
         options, resolve, this));
     } else {
+      //@ts-ignore
       return new Promise(resolve => window.Terrasoft.ProcessModuleUtilities._runProcessOld(
         config.sysProcessName, config.parameters, response => resolve(response), this));
     }
@@ -44,12 +46,14 @@ export default class ProcessService {
   private getRunProcessOptions(config: ProcessRequest) {
     return {
       schemaName: config.sysProcessName,
+      //@ts-ignore
       parameterValues: window.Terrasoft.ProcessModuleUtilities._convertRequestParameters(config.parameters),
       resultParameterNames: config.resultParameters
     };
   }
 
   private async getProcessById(sysProcessId?: Guid | string): Promise<any> {
+    //@ts-ignore
     const esq = window.Ext.create("Terrasoft.EntitySchemaQuery", {
       rootSchemaName: "VwSysProcess",
       rowCount: 1

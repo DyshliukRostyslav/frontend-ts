@@ -1,7 +1,7 @@
-import { Sandbox } from "@el-sdk/interfaces/sandbox";
+import { Sandbox } from "interfaces/sandbox";
 import { CardState, SetOptions, SaveConfig } from "./models/ui";
 import { methods } from "./class-utils";
-import { Guid } from "@el-sdk/structures/guid";
+import { Guid } from "structures/guid";
 
 export abstract class BasePage {
   protected Ext: any = window.Ext;

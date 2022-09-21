@@ -1,5 +1,5 @@
-import { requireAsync } from "@el-sdk/require";
-import EntityMapperService from "@el-sdk/services/entity-mapper-service";
+import { requireAsync } from "require";
+import EntityMapperService from "services/entity-mapper-service";
 import { QueryHelper } from "./query-helper";
 
 export class DbSet<

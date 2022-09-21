@@ -1,7 +1,7 @@
-import { Resources } from "@el-sdk/interfaces/resources";
-import { requireAsync } from "@el-sdk/require";
-import { Guid } from "@el-sdk/structures/guid";
-import { ProcessRequest, ProcessResponse } from "@el-sdk/types/process";
+import { Resources } from "interfaces/resources";
+import { requireAsync } from "require";
+import { Guid } from "structures/guid";
+import { ProcessRequest, ProcessResponse } from "types/process";
 import { Service } from "typedi";
 import { formatString } from 'typescript-string-operations';
 import { FeaturesService } from "./features-service";

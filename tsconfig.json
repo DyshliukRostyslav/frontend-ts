@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "es2015", "es2018.promise"],
+    "module": "commonjs",
+    "baseUrl": "./",
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "extendedDiagnostics": true,
+    "composite": true,
+    "outDir": "./dist",
+    "inlineSourceMap": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["./dist"]
+}

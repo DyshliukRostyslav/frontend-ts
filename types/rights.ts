@@ -1,4 +1,4 @@
-import { Guid } from "@el-sdk/structures/guid";
+import { Guid } from "structures/guid";
 
 export type CanEditRequest = {
   schemaName: string

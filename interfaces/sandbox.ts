@@ -1,4 +1,4 @@
-import { ModuleConfig } from "@el-sdk/ui/models/ui"
+import { ModuleConfig } from "ui/models/ui"
 
 export interface Sandbox {
   id: string

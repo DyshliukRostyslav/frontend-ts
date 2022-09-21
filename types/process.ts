@@ -1,4 +1,4 @@
-import { Guid } from "@el-sdk/structures/guid"
+import { Guid } from "structures/guid"
 import { ErrorInfo } from "./errors"
 
 export interface ProcessRequest {

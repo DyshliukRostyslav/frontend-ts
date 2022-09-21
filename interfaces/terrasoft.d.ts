@@ -4,6 +4,6 @@ interface Window {
   EdenLab: any
 }
 
-declare var Terrasoft: any;
-declare var Ext: any;
-declare var EdenLab: any;
+export declare var Terrasoft: any;
+export declare var Ext: any;
+export declare var EdenLab: any;

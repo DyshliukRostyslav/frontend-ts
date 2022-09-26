@@ -1,0 +1,40 @@
+{
+  "name": "@dyshliukrostyslav/core",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "https://github.com/DyshliukRostyslav/frontend-ts.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-proposal-export-default-from": "^7.16.7",
+    "@babel/plugin-transform-modules-amd": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/uuid": "^8.3.4",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "date-and-time": "^2.4.1",
+    "directory-import": "^2.3.1",
+    "error-stack-parser": "^2.1.4",
+    "glob": "^7.2.0",
+    "moment": "^2.29.1",
+    "reflect-metadata": "^0.1.13",
+    "replace-in-file-webpack-plugin": "^1.0.6",
+    "source-map-loader": "^3.0.1",
+    "string-format": "^2.0.0",
+    "ts-loader": "^9.2.6",
+    "typedi": "^0.10.0",
+    "typescript": "^4.5.2",
+    "typescript-string-operations": "^1.5.0",
+    "uuid": "^8.3.2",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "extendedDiagnostics": true,
+    "composite": true,
+    "outDir": "./dist",
+    "inlineSourceMap": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["./dist"]
+}
